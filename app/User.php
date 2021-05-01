@@ -1,6 +1,6 @@
 <?php
 
-namespace Corp;
+namespace Blog;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -25,12 +25,12 @@ class User extends Authenticatable
     ];
     
     public function articles() {
-		return $this->hasMany('Corp\Article');
+		return $this->hasMany('Blog\Article');
 	}
 	
 	
 	public function roles() {
-		return $this->belongsToMany('Corp\Role','role_user');
+		return $this->belongsToMany('Blog\Role','role_user');
 	}
 	
 	//  'string'  array('View_Admin','ADD_ARTICLES')

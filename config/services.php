@@ -34,7 +34,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => Corp\User::class,
+        'model' => Blog\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

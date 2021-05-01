@@ -1,8 +1,8 @@
 <?php
 
-namespace Corp\Repositories;
+namespace Blog\Repositories;
 
-use Corp\User;
+use Blog\User;
 use Config;
 
 use Gate;

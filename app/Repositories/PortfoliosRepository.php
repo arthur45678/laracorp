@@ -1,8 +1,8 @@
 <?php
 
-namespace Corp\Repositories;
+namespace Blog\Repositories;
 
-use Corp\Portfolio;
+use Blog\Portfolio;
 
 class PortfoliosRepository extends Repository {
 	

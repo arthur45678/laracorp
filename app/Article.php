@@ -1,6 +1,6 @@
 <?php
 
-namespace Corp;
+namespace Blog;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,16 +13,16 @@ class Article extends Model
     
     
     public function user() {
-		return $this->belongsTo('Corp\User');
+		return $this->belongsTo('Blog\User');
 	}
 	
 	public function category() {
-		return $this->belongsTo('Corp\Category');
+		return $this->belongsTo('Blog\Category');
 	}
 	
 	public function comments()
     {
-        return $this->hasMany('Corp\Comment');
+        return $this->hasMany('Blog\Comment');
     }	
 	
 }

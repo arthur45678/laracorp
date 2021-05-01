@@ -1,6 +1,6 @@
 <?php
 
-namespace Corp\Providers;
+namespace Blog\Providers;
 
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'Corp\Http\Controllers';
+    protected $namespace = 'Blog\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -31,15 +31,15 @@ class RouteServiceProvider extends ServiceProvider
         parent::boot($router);
         
         $router->bind('articles', function ($value) {
-        	return \Corp\Article::where('alias',$value)->first();
+        	return \Blog\Article::where('alias',$value)->first();
         });
         
         $router->bind('menus', function ($value) {
-        	return \Corp\Menu::where('id',$value)->first();
+        	return \Blog\Menu::where('id',$value)->first();
         });
         
         $router->bind('users', function ($value) {
-		    return \Corp\User::find($value);
+		    return \Blog\User::find($value);
 		});
    
     }

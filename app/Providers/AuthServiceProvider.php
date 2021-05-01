@@ -1,18 +1,18 @@
 <?php
 
-namespace Corp\Providers;
+namespace Blog\Providers;
 
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
-use Corp\Article;
-use Corp\Permission;
-use Corp\Menu;
-use Corp\User;
-use Corp\Policies\ArticlePolicy;
-use Corp\Policies\PermissionPolicy;
-use Corp\Policies\MenusPolicy;
-use Corp\Policies\UserPolicy;
+use Blog\Article;
+use Blog\Permission;
+use Blog\Menu;
+use Blog\User;
+use Blog\Policies\ArticlePolicy;
+use Blog\Policies\PermissionPolicy;
+use Blog\Policies\MenusPolicy;
+use Blog\Policies\UserPolicy;
 
 class AuthServiceProvider extends ServiceProvider
 {

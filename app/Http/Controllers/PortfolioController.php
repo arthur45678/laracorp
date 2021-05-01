@@ -1,12 +1,12 @@
 <?php
 
-namespace Corp\Http\Controllers;
+namespace Blog\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Corp\Http\Requests;
+use Blog\Http\Requests;
 
-use Corp\Repositories\PortfoliosRepository;
+use Blog\Repositories\PortfoliosRepository;
 
 class PortfolioController extends SiteController
 {
@@ -14,7 +14,7 @@ class PortfolioController extends SiteController
     
     public function __construct(PortfoliosRepository $p_rep) {
     	
-    	parent::__construct(new \Corp\Repositories\MenusRepository(new \Corp\Menu));
+    	parent::__construct(new \Blog\Repositories\MenusRepository(new \Blog\Menu));
     	
     	$this->p_rep = $p_rep;
 

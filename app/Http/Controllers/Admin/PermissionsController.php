@@ -1,14 +1,14 @@
 <?php
 
-namespace Corp\Http\Controllers\Admin;
+namespace Blog\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
-use Corp\Http\Requests;
-use Corp\Http\Controllers\Controller;
+use Blog\Http\Requests;
+use Blog\Http\Controllers\Controller;
 
-use Corp\Repositories\PermissionsRepository;
-use Corp\Repositories\RolesRepository;
+use Blog\Repositories\PermissionsRepository;
+use Blog\Repositories\RolesRepository;
 
 use Gate;
 

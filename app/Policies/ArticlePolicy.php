@@ -1,12 +1,12 @@
 <?php
 
-namespace Corp\Policies;
+namespace Blog\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-use Corp\User;
+use Blog\User;
 
-use Corp\Article;
+use Blog\Article;
 
 class ArticlePolicy
 {

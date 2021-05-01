@@ -1,8 +1,8 @@
 <?php
 
-namespace Corp\Http\Requests;
+namespace Blog\Http\Requests;
 
-use Corp\Http\Requests\Request;
+use Blog\Http\Requests\Request;
 
 class ArticleRequest extends Request
 {

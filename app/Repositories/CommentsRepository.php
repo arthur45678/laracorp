@@ -1,8 +1,8 @@
 <?php
 
-namespace Corp\Repositories;
+namespace Blog\Repositories;
 
-use Corp\Comment;
+use Blog\Comment;
 
 class CommentsRepository extends Repository {
 	

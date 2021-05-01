@@ -1,15 +1,15 @@
 <?php
 
-namespace Corp\Http\Controllers;
+namespace Blog\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Corp\Http\Requests;
+use Blog\Http\Requests;
 
 use Validator;
 use Auth;
-use Corp\Comment;
-use Corp\Article;
+use Blog\Comment;
+use Blog\Article;
 
 class CommentController extends SiteController
 {

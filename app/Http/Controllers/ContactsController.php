@@ -1,10 +1,10 @@
 <?php
 
-namespace Corp\Http\Controllers;
+namespace Blog\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Corp\Http\Requests;
+use Blog\Http\Requests;
 
 use Mail;
 
@@ -13,7 +13,7 @@ class ContactsController extends SiteController
     //
     public function __construct() {
     	
-    	parent::__construct(new \Corp\Repositories\MenusRepository(new \Corp\Menu));
+    	parent::__construct(new \Blog\Repositories\MenusRepository(new \Blog\Menu));
     	
     	
     	$this->bar = 'left';

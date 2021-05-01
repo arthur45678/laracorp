@@ -1,14 +1,14 @@
 <?php
 
-namespace Corp\Http\Controllers;
+namespace Blog\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Corp\Http\Requests;
+use Blog\Http\Requests;
 
-use Corp\Repositories\SlidersRepository;
-use Corp\Repositories\PortfoliosRepository;
-use Corp\Repositories\ArticlesRepository;
+use Blog\Repositories\SlidersRepository;
+use Blog\Repositories\PortfoliosRepository;
+use Blog\Repositories\ArticlesRepository;
 
 
 use Config;
@@ -18,7 +18,7 @@ class IndexController extends SiteController
     
     public function __construct(SlidersRepository $s_rep, PortfoliosRepository $p_rep, ArticlesRepository $a_rep) {
     	
-    	parent::__construct(new \Corp\Repositories\MenusRepository(new \Corp\Menu));
+    	parent::__construct(new \Blog\Repositories\MenusRepository(new \Blog\Menu));
     	
     	$this->s_rep = $s_rep;
     	$this->p_rep = $p_rep;

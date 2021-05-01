@@ -1,18 +1,18 @@
 <?php
 
-namespace Corp\Http\Controllers\Admin;
+namespace Blog\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
-use Corp\Http\Requests;
-use Corp\Http\Requests\UserRequest;
-use Corp\Http\Controllers\Controller;
+use Blog\Http\Requests;
+use Blog\Http\Requests\UserRequest;
+use Blog\Http\Controllers\Controller;
 
-use Corp\Repositories\UsersRepository;
-use Corp\Repositories\RolesRepository;
+use Blog\Repositories\UsersRepository;
+use Blog\Repositories\RolesRepository;
 
 use Gate;
-use Corp\User;
+use Blog\User;
 
 class UsersController extends AdminController
 {
@@ -73,7 +73,7 @@ class UsersController extends AdminController
     }
 	
 	public function getRoles() {
-		return \Corp\Role::all();
+		return \Blog\Role::all();
 	}
 
     /**

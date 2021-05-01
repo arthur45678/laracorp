@@ -1,8 +1,8 @@
 <?php
 
-namespace Corp\Repositories;
+namespace Blog\Repositories;
 
-use Corp\Permission;
+use Blog\Permission;
 
 use Gate;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace Corp\Http\Controllers;
+namespace Blog\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Corp\Http\Requests;
+use Blog\Http\Requests;
 
-use Corp\Repositories\MenusRepository;
+use Blog\Repositories\MenusRepository;
 
 use Menu;
 

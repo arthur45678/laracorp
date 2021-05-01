@@ -1,23 +1,23 @@
 <?php
 
-namespace Corp\Http\Controllers;
+namespace Blog\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Corp\Repositories\PortfoliosRepository;
-use Corp\Repositories\ArticlesRepository;
-use Corp\Repositories\CommentsRepository;
+use Blog\Repositories\PortfoliosRepository;
+use Blog\Repositories\ArticlesRepository;
+use Blog\Repositories\CommentsRepository;
 
-use Corp\Http\Requests;
+use Blog\Http\Requests;
 
-use Corp\Category;
+use Blog\Category;
 
 class ArticlesController extends SiteController
 {
     
      public function __construct(PortfoliosRepository $p_rep, ArticlesRepository $a_rep, CommentsRepository $c_rep) {
     	
-    	parent::__construct(new \Corp\Repositories\MenusRepository(new \Corp\Menu));
+    	parent::__construct(new \Blog\Repositories\MenusRepository(new \Blog\Menu));
     	
     	$this->p_rep = $p_rep;
     	$this->a_rep = $a_rep;

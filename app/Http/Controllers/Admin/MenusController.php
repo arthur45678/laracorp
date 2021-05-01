@@ -1,16 +1,16 @@
 <?php
 
-namespace Corp\Http\Controllers\Admin;
+namespace Blog\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
-use Corp\Http\Requests;
-use Corp\Http\Requests\MenusRequest;
-use Corp\Http\Controllers\Controller;
+use Blog\Http\Requests;
+use Blog\Http\Requests\MenusRequest;
+use Blog\Http\Controllers\Controller;
 
-use Corp\Repositories\MenusRepository;
-use Corp\Repositories\ArticlesRepository;
-use Corp\Repositories\PortfoliosRepository;
+use Blog\Repositories\MenusRepository;
+use Blog\Repositories\ArticlesRepository;
+use Blog\Repositories\PortfoliosRepository;
 
 use Gate;
 use Menu;
@@ -104,7 +104,7 @@ class MenusController extends AdminController
     		
     	},['0' => 'Parent']);
     	
-    	$categories = \Corp\Category::select(['title','alias','parent_id','id'])->get();
+    	$categories = \Blog\Category::select(['title','alias','parent_id','id'])->get();
     	
     	$list = array();
     	$list = array_add($list,'0','Not');
@@ -127,7 +127,7 @@ class MenusController extends AdminController
 		}, []);
 		
 		
-		$filters = \Corp\Filter::select('id','title','alias')->get()->reduce(function ($returnFilters, $filter) {
+		$filters = \Blog\Filter::select('id','title','alias')->get()->reduce(function ($returnFilters, $filter) {
 		    $returnFilters[$filter->alias] = $filter->title;
 		    return $returnFilters;
 		}, ['parent' => 'Раздел портфолио']);
@@ -181,7 +181,7 @@ class MenusController extends AdminController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(\Corp\Menu $menu)
+    public function edit(\Blog\Menu $menu)
     {
         //
         //dd($menu);
@@ -240,7 +240,7 @@ class MenusController extends AdminController
     		
     	},['0' => 'Родительский пункт меню']);
     	
-    	$categories = \Corp\Category::select(['title','alias','parent_id','id'])->get();
+    	$categories = \Blog\Category::select(['title','alias','parent_id','id'])->get();
     	
     	$list = array();
     	$list = array_add($list,'0','Не используется');
@@ -263,7 +263,7 @@ class MenusController extends AdminController
 		}, []);
 		
 		
-		$filters = \Corp\Filter::select('id','title','alias')->get()->reduce(function ($returnFilters, $filter) {
+		$filters = \Blog\Filter::select('id','title','alias')->get()->reduce(function ($returnFilters, $filter) {
 		    $returnFilters[$filter->alias] = $filter->title;
 		    return $returnFilters;
 		}, ['parent' => 'Раздел портфолио']);
@@ -287,7 +287,7 @@ class MenusController extends AdminController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, \Corp\Menu $menu)
+    public function update(Request $request, \Blog\Menu $menu)
     {
         //
         $result = $this->m_rep->updateMenu($request,$menu);
@@ -305,7 +305,7 @@ class MenusController extends AdminController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(\Corp\Menu $menu)
+    public function destroy(\Blog\Menu $menu)
     {
         //
         

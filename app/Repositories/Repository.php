@@ -1,6 +1,6 @@
 <?php
 
-namespace Corp\Repositories;
+namespace Blog\Repositories;
 
 use Config;
 

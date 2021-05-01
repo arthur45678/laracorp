@@ -1,19 +1,19 @@
 <?php
 
-namespace Corp\Http\Controllers\Admin;
+namespace Blog\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use Corp\Http\Requests\ArticleRequest;
+use Blog\Http\Requests\ArticleRequest;
 
-use Corp\Http\Requests;
-use Corp\Http\Controllers\Controller;
+use Blog\Http\Requests;
+use Blog\Http\Controllers\Controller;
 
-use Corp\Repositories\ArticlesRepository;
+use Blog\Repositories\ArticlesRepository;
 
 use Gate;
 
-use Corp\Category;
-use Corp\Article;
+use Blog\Category;
+use Blog\Article;
 
 
 class ArticlesController extends AdminController
@@ -71,7 +71,7 @@ class ArticlesController extends AdminController
      */
     public function create()
     {
-		if(Gate::denies('save', new \Corp\Article)) {
+		if(Gate::denies('save', new \Blog\Article)) {
 			abort(403);
 		}
 		

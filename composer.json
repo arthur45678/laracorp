@@ -23,7 +23,7 @@
             "database"
         ],
         "psr-4": {
-            "Corp\\": "app/"
+            "Blog\\": "app/"
         }
     },
     "autoload-dev": {

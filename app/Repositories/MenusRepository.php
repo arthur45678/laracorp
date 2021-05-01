@@ -1,8 +1,8 @@
 <?php
 
-namespace Corp\Repositories;
+namespace Blog\Repositories;
 
-use Corp\Menu;
+use Blog\Menu;
 use Gate;
 
 class MenusRepository extends Repository {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Corp\Exceptions;
+namespace Blog\Exceptions;
 
 use Exception;
 use Illuminate\Validation\ValidationException;
@@ -53,7 +53,7 @@ class Handler extends ExceptionHandler
 	   		switch($statusCode) {
 				case '404' :
 				
-				$obj = new \Corp\Http\Controllers\SiteController(new \Corp\Repositories\MenusRepository(new \Corp\Menu));
+				$obj = new \Blog\Http\Controllers\SiteController(new \Blog\Repositories\MenusRepository(new \Blog\Menu));
 				
 				$navigation = view(config('settings.theme').'.navigation')->with('menu',$obj->getMenu())->render();
 				

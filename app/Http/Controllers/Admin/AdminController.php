@@ -1,11 +1,11 @@
 <?php
 
-namespace Corp\Http\Controllers\Admin;
+namespace Blog\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
-use Corp\Http\Requests;
-use Corp\Http\Controllers\Controller;
+use Blog\Http\Requests;
+use Blog\Http\Controllers\Controller;
 
 use Auth;
 
@@ -13,7 +13,7 @@ use Menu;
 
 use Gate;
 
-class AdminController extends \Corp\Http\Controllers\Controller
+class AdminController extends \Blog\Http\Controllers\Controller
 {
     //
     
